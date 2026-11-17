@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circumference Calculator</title>
+
+    <style>
+        body {
+            background: #f4faff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            width: 320px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px #c9e6f5;
+        }
+
+        h2 {
+            color: #168bd2;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 15px 0;
+        }
+
+        button {
+            padding: 12px 20px;
+            background: #168bd2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #result {
+            margin-top: 20px;
+            color: #168bd2;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Circumference Calculator</h2>
+
+        <input type="number" id="radius" placeholder="Enter radius in cm">
+
+        <button onclick="calculate()">Calculate</button>
+
+        <p id="result">Result:</p>
+    </div>
+
+    <script>
+        function calculate() {
+            let radius = Number(document.getElementById("radius").value);
+            let circumference = 2 * Math.PI * radius;
+
+            if (radius <= 0 || document.getElementById("radius").value === "") {
+                document.getElementById("result").textContent = "Enter a valid radius";
+            } else {
+                document.getElementById("result").textContent =
+                    circumference.toFixed(2) + " cm";
+            }
+        }
+    </script>
+
+</body>
+</html>

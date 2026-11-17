@@ -1,0 +1,157 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4faff;
+    color: #142b40;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: white;
+    box-shadow: 0 2px 10px #c9e6f5;
+}
+
+header h2 {
+    color: #168bd2;
+}
+
+nav a {
+    text-decoration: none;
+    color: #142b40;
+    margin-left: 15px;
+}
+
+nav a:hover {
+    color: #168bd2;
+    border-bottom: 2px solid #168bd2;
+}
+
+section {
+    padding: 60px 8%;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    min-height: 75vh;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero span {
+    color: #168bd2;
+}
+
+.hero p, .about p {
+    line-height: 1.8;
+    color: #526779;
+}
+
+.profile {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #8ed6ff;
+    transition: 0.3s;
+}
+
+.profile:hover {
+    box-shadow: 0 0 30px #168bd2;
+    transform: scale(1.04);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 22px;
+    background: #168bd2;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.about {
+    background: white;
+    text-align: center;
+}
+
+#projects h2, .about h2 {
+    text-align: center;
+    color: #168bd2;
+    margin-bottom: 30px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px #d6eaf6;
+}
+
+.project-card h3 {
+    color: #168bd2;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #526779;
+    line-height: 1.6;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #168bd2;
+    text-decoration: none;
+}
+
+footer {
+    background: #142b40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .profile {
+        width: 170px;
+        height: 170px;
+    }
+}
